@@ -2,7 +2,7 @@
 <widget id="free.initunes.iniremote" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>iniRemote</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Remote for iniTunes
     </description>
     <author email="raf924@gmail.com" href="http://initunes.fr.nf">
         PhoneGap Team
