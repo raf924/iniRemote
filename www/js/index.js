@@ -54,6 +54,7 @@ var app = {
                     };
         navigator.camera.getPicture(function(data){
             $("#picture").attr('src', 'data:image/jpeg;base64,'+data);
+            $("#picture").style = "display:block";
         },options);
     }
 };
