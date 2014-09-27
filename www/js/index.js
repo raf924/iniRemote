@@ -43,18 +43,17 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
+        navigator.vibrate(1000);
         console.log('Received Event: ' + id);
     },
     takePicture: function() {
         var options =   {   quality: 100,
                         destinationType: Camera.DestinationType.DATA_URL,
                         sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
-                        encodingType: 0     // 0=JPG 1=PNG
+                        encodingType: Camera.EncodingType.JPEG     // 0=JPG 1=PNG
                     };
         navigator.camera.getPicture(function(data){
-            $("#picture").attr('src', 'data:image/jpeg;base64,'+data);
-            $("#picture").style = "display:block";
-        },options);
+            document.getElementById("picture").src = 'data:image/jpeg;base64,'+data;
+        },function(message){},options);
     }
 };
